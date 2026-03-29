@@ -4,77 +4,161 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>سياسة الخصوصية - جواب تِك | Privacy Policy</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #5a67d8;
             --secondary: #764ba2;
-            --bg: #f4f7f6;
-            --text: #2d3748;
         }
 
+        /* 🌙 الوضع الافتراضي (Dark) */
         body {
             font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #1a202c, #2d3748);
             margin: 0;
             padding: 20px;
-            color: var(--text);
+            color: white;
+        }
+
+        /* ☀️ Light Mode */
+        @media (prefers-color-scheme: light) {
+            body {
+                background: linear-gradient(135deg, #667eea, #764ba2);
+                color: #2d3748;
+            }
+
+            .container {
+                background: white;
+                color: #2d3748;
+            }
         }
 
         .container {
             max-width: 900px;
             margin: 20px auto;
-            background: white;
+            background: #1f2937;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
-        /* Header Styles */
+        /* =========================
+           🚀 HEADER PRO LEVEL
+        ========================= */
+
         .header {
             text-align: center;
-            border-bottom: 2px solid #eee;
             padding-bottom: 30px;
             margin-bottom: 40px;
+            position: relative;
         }
 
+        /* Glow خلفي */
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(118,75,162,0.25), transparent 70%);
+            filter: blur(40px);
+            z-index: 0;
+        }
+
+        /* Logo Box */
         .logo-box {
-            background: var(--primary);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 18px;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 15px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 2em;
-            font-weight: bold;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+            animation: float 3s ease-in-out infinite;
         }
 
-        h1 { color: var(--primary); margin: 10px 0; font-size: 2em; }
-        .last-updated { font-size: 0.9em; color: #718096; background: #edf2f7; padding: 5px 15px; border-radius: 20px; display: inline-block; }
+        .logo-box img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+            border-radius: 20px;
+        }
 
-        /* Content Styles */
-        h2 { color: var(--secondary); border-right: 5px solid var(--primary); padding-right: 15px; margin-top: 35px; }
-        p, li { line-height: 1.8; font-size: 1.05em; }
-        ul { list-style: none; padding: 0; }
-        ul li { background: #f8fafc; margin-bottom: 8px; padding: 12px 15px; border-radius: 10px; border: 1px solid #edf2f7; }
-        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        h1 {
+            color: #a5b4fc;
+            margin: 10px 0;
+            font-size: 2em;
+        }
+
+        .app-name {
+            font-size: 1.1em;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        .last-updated {
+            font-size: 0.9em;
+            color: #cbd5f5;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Content */
+        h2 {
+            color: #c4b5fd;
+            border-right: 5px solid var(--primary);
+            padding-right: 15px;
+            margin-top: 35px;
+        }
+
+        p, li {
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 8px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
         .contact-box {
-            background: #f0f4ff;
+            background: rgba(99,102,241,0.1);
             padding: 25px;
             border-radius: 15px;
             border-right: 5px solid var(--primary);
             margin: 40px 0;
         }
 
-        /* English Section Adjustments */
+        /* English Section */
         .english-section {
             direction: ltr;
             text-align: left;
-            border-top: 3px double #eee;
+            border-top: 3px double rgba(255,255,255,0.2);
             margin-top: 50px;
             padding-top: 40px;
         }
@@ -82,27 +166,52 @@
         .english-section h2 {
             border-right: none;
             border-left: 5px solid var(--primary);
-            padding-right: 0;
             padding-left: 15px;
-            font-family: sans-serif;
+            color: #c4b5fd;
         }
 
         .english-section p, .english-section li {
             font-family: sans-serif;
         }
 
-        a { color: var(--primary); text-decoration: none; font-weight: bold; }
-        .footer { text-align: center; color: #a0aec0; margin-top: 40px; font-size: 0.9em; border-top: 1px solid #eee; padding-top: 20px; }
+        a {
+            color: #a5b4fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            color: #94a3b8;
+            margin-top: 40px;
+            font-size: 0.9em;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
     </style>
 </head>
+
 <body>
 
     <div class="container">
+
         <div class="header">
-            <div class="logo-box">ج</div>
+
+            <div class="logo-box">
+                <img src="images/logo.png" alt="Jawab Tik Logo">
+            </div>
+
             <h1>سياسة الخصوصية | Privacy Policy</h1>
-            <p><strong>تطبيق جواب تِك - Jawab Tik</strong></p>
-            <div class="last-updated">آخر تحديث: 28 فبراير 2026</div>
+
+            <p class="app-name">
+                تطبيق جواب تِك - Jawab Tik
+            </p>
+
+            <div class="last-updated">
+                آخر تحديث: 28 فبراير 2026
+            </div>
+
         </div>
 
         <section class="arabic-content">
@@ -125,58 +234,30 @@
             </ul>
 
             <h2>4. خدمات الطرف الثالث</h2>
-            <p>التطبيق يستخدم خدمات تابعة لجهة خارجية لمعالجة البيانات:</p>
             <ul>
                 <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
                 <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Cloud Storage & Auth</a></li>
             </ul>
 
             <h2>5. حذف البيانات</h2>
-            <p>نحن نحترم حقك في التحكم ببياناتك. يمكنك في أي وقت حذف حسابك وبياناتك نهائياً من خلال خيار "حذف الحساب" الموجود في شاشة الإعدادات داخل التطبيق، أو عبر مراسلتنا بريدياً.</p>
+            <p>يمكنك حذف حسابك وبياناتك نهائياً من داخل التطبيق أو عبر مراسلتنا.</p>
 
             <div class="contact-box">
-                <h3 style="margin-top: 0;">تواصل معنا</h3>
-                <p>إذا كان لديك أي سؤال، يمكنك التواصل مع المطور <strong>Ibrahim Ayasrah</strong> عبر:</p>
-                <p>البريد الإلكتروني: <a href="mailto:engiba@gmail.com">engiba@gmail.com</a></p>
+                <h3>تواصل معنا</h3>
+                <p>Ibrahim Ayasrah</p>
+                <p><a href="mailto:engiba@gmail.com">engiba@gmail.com</a></p>
             </div>
         </section>
 
         <section class="english-section">
             <h2>Privacy Policy</h2>
-            <p>Ibrahim Ayasrah built the <strong>Jawab Tik</strong> app as a Free app. This SERVICE is provided by Ibrahim Ayasrah at no cost and is intended for use as is.</p>
-
-            <h3>1. Information Collection and Use</h3>
-            <p>For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to:</p>
-            <ul>
-                <li><strong>Account Data:</strong> Name and Email address.</li>
-                <li><strong>Game Data:</strong> Scores, answer history, and statistics.</li>
-                <li><strong>Device Info:</strong> Operating system version and device identifiers.</li>
-            </ul>
-
-            <h3>2. Third-Party Services</h3>
-            <p>The app does use third-party services that may collect information used to identify you:</p>
-            <ul>
-                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase (Analytics & Database)</a></li>
-            </ul>
-
-            <h3>3. Data Retention and Deletion</h3>
-            <p>We retain your data for as long as you use the app. If you wish to delete your data, you can use the <strong>"Delete Account"</strong> feature within the app settings, which will permanently erase your information from our servers.</p>
-
-            <h3>4. Children’s Privacy</h3>
-            <p>These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
-
-            <h3>5. Security</h3>
-            <p>We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it.</p>
-
-            <h3>6. Contact Us</h3>
-            <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:engiba@gmail.com">engiba@gmail.com</a></p>
+            <p>Jawab Tik is a free app provided as is.</p>
         </section>
 
         <div class="footer">
-            <p>جميع الحقوق محفوظة © 2026 جواب تِك</p>
-            <p>All Rights Reserved © 2026 Jawab Tik</p>
+            <p>© 2026 Jawab Tik</p>
         </div>
+
     </div>
 
 </body>

@@ -1,264 +1,251 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>سياسة الخصوصية - جواب تِك | Privacy Policy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<title>سياسة الخصوصية - جواب تِك</title>
 
-    <style>
-        :root {
-            --primary: #5a67d8;
-            --secondary: #764ba2;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
-        /* 🌙 الوضع الافتراضي (Dark) */
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: linear-gradient(135deg, #1a202c, #2d3748);
-            margin: 0;
-            padding: 20px;
-            color: white;
-        }
+<style>
 
-        /* ☀️ Light Mode */
-        @media (prefers-color-scheme: light) {
-            body {
-                background: linear-gradient(135deg, #667eea, #764ba2);
-                color: #2d3748;
-            }
+/* ========= ROOT ========= */
+:root {
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --text-dark: #111827;
+    --text-light: #f9fafb;
+}
 
-            .container {
-                background: white;
-                color: #2d3748;
-            }
-        }
+/* ========= BODY ========= */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: 0.4s;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            background: #1f2937;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        }
+/* Dark Mode */
+body.dark {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: var(--text-light);
+}
 
-        /* =========================
-           🚀 HEADER PRO LEVEL
-        ========================= */
+/* Light Mode */
+body.light {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: var(--text-dark);
+}
 
-        .header {
-            text-align: center;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            position: relative;
-        }
+/* ========= CONTAINER ========= */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
 
-        /* Glow خلفي */
-        .header::before {
-            content: "";
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(118,75,162,0.25), transparent 70%);
-            filter: blur(40px);
-            z-index: 0;
-        }
+body.dark .container {
+    background: rgba(255,255,255,0.05);
+}
 
-        /* Logo Box */
-        .logo-box {
-            width: 110px;
-            height: 110px;
-            margin: 0 auto 15px;
-            border-radius: 30px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 1;
-            animation: float 3s ease-in-out infinite;
-        }
+body.light .container {
+    background: white;
+}
 
-        .logo-box img {
-            width: 75%;
-            height: 75%;
-            object-fit: contain;
-            border-radius: 20px;
-        }
+/* ========= HEADER ========= */
+.header {
+    text-align: center;
+    position: relative;
+}
 
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
+/* Glow */
+.header::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(99,102,241,0.35), transparent 70%);
+    filter: blur(60px);
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-        h1 {
-            color: #a5b4fc;
-            margin: 10px 0;
-            font-size: 2em;
-        }
+/* LOGO */
+.logo-box {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 30px;
+    background: linear-gradient(135deg,#6366f1,#8b5cf6);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    animation: float 3s infinite ease-in-out;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
 
-        .app-name {
-            font-size: 1.1em;
-            color: #94a3b8;
-            margin-top: 5px;
-        }
+.logo-box img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+}
 
-        .last-updated {
-            font-size: 0.9em;
-            color: #cbd5f5;
-            background: rgba(255,255,255,0.1);
-            padding: 6px 16px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-        }
+/* Float Animation */
+@keyframes float {
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+    100%{transform:translateY(0)}
+}
 
-        /* Content */
-        h2 {
-            color: #c4b5fd;
-            border-right: 5px solid var(--primary);
-            padding-right: 15px;
-            margin-top: 35px;
-        }
+/* ========= TEXT ========= */
+h1 {
+    font-size: 2em;
+    margin: 15px 0;
+    font-weight: 700;
+}
 
-        p, li {
-            line-height: 1.8;
-            font-size: 1.05em;
-        }
+body.dark h1 { color: #e0e7ff; }
+body.light h1 { color: #1e293b; }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+.app-name {
+    font-size: 1.1em;
+    opacity: 0.8;
+}
 
-        ul li {
-            background: rgba(255,255,255,0.05);
-            margin-bottom: 8px;
-            padding: 12px 15px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.08);
-        }
+/* Updated Badge */
+.last-updated {
+    display:inline-block;
+    margin-top:10px;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:0.9em;
+}
 
-        .contact-box {
-            background: rgba(99,102,241,0.1);
-            padding: 25px;
-            border-radius: 15px;
-            border-right: 5px solid var(--primary);
-            margin: 40px 0;
-        }
+body.dark .last-updated {
+    background: rgba(255,255,255,0.1);
+}
 
-        /* English Section */
-        .english-section {
-            direction: ltr;
-            text-align: left;
-            border-top: 3px double rgba(255,255,255,0.2);
-            margin-top: 50px;
-            padding-top: 40px;
-        }
+body.light .last-updated {
+    background: #eef2ff;
+}
 
-        .english-section h2 {
-            border-right: none;
-            border-left: 5px solid var(--primary);
-            padding-left: 15px;
-            color: #c4b5fd;
-        }
+/* ========= SECTIONS ========= */
+h2 {
+    margin-top:30px;
+    border-right:4px solid var(--primary);
+    padding-right:10px;
+}
 
-        .english-section p, .english-section li {
-            font-family: sans-serif;
-        }
+p,li {
+    line-height:1.8;
+}
 
-        a {
-            color: #a5b4fc;
-            text-decoration: none;
-            font-weight: bold;
-        }
+/* Cards */
+ul li {
+    background: rgba(255,255,255,0.06);
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:8px;
+}
 
-        .footer {
-            text-align: center;
-            color: #94a3b8;
-            margin-top: 40px;
-            font-size: 0.9em;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-        }
+/* Contact */
+.contact-box {
+    padding:20px;
+    border-radius:15px;
+    background: rgba(99,102,241,0.1);
+}
 
-    </style>
+/* English */
+.english-section {
+    direction:ltr;
+    margin-top:40px;
+    border-top:1px solid rgba(255,255,255,0.2);
+    padding-top:20px;
+}
+
+/* Footer */
+.footer {
+    text-align:center;
+    margin-top:30px;
+    opacity:0.7;
+}
+
+/* ========= TOGGLE ========= */
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+</style>
 </head>
 
-<body>
+<body class="dark">
 
-    <div class="container">
+<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
 
-        <div class="header">
+<div class="container">
 
-            <div class="logo-box">
-                <img src="images/logo.png" alt="Jawab Tik Logo">
-            </div>
+<div class="header">
 
-            <h1>سياسة الخصوصية | Privacy Policy</h1>
+<div class="logo-box">
+<img src="https://raw.githubusercontent.com/ibaaya/jawab-tik-privacy/main/logo.png">
+</div>
 
-            <p class="app-name">
-                تطبيق جواب تِك - Jawab Tik
-            </p>
+<h1>سياسة الخصوصية | Privacy Policy</h1>
 
-            <div class="last-updated">
-                آخر تحديث: 28 فبراير 2026
-            </div>
+<p class="app-name">تطبيق جواب تِك - Jawab Tik</p>
 
-        </div>
+<div class="last-updated">آخر تحديث: 28 فبراير 2026</div>
 
-        <section class="arabic-content">
-            <h2>1. مقدمة</h2>
-            <p>مرحباً بك في تطبيق "جواب تِك". نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. تم تطوير هذا التطبيق كـ <strong>صدقة جارية</strong>، وهو مجاني بالكامل ولا يحتوي على أي إعلانات.</p>
+</div>
 
-            <h2>2. المعلومات التي نجمعها</h2>
-            <p>عند استخدامك للتطبيق، قد نجمع بعض المعلومات لتقديم خدمة أفضل:</p>
-            <ul>
-                <li><strong>بيانات الحساب:</strong> الاسم والبريد الإلكتروني عند التسجيل.</li>
-                <li><strong>بيانات الاستخدام:</strong> النقاط المحرزة، سجل الإجابات، وإحصائيات التقدم.</li>
-                <li><strong>معلومات الجهاز:</strong> نوع نظام التشغيل ومعرف الجهاز الفني لتحسين الأداء.</li>
-            </ul>
+<section>
+<h2>1. مقدمة</h2>
+<p>نحترم خصوصيتك ونحمي بياناتك.</p>
 
-            <h2>3. كيف نستخدم بياناتك</h2>
-            <ul>
-                <li>لحفظ تقدمك في اللعبة ونقاطك في "لوحة الصدارة".</li>
-                <li>لتحسين جودة الأسئلة وتجربة المستخدم.</li>
-                <li>لإرسال تنبيهات تقنية أو تحديثات ضرورية.</li>
-            </ul>
+<h2>2. البيانات</h2>
+<ul>
+<li>الاسم والبريد</li>
+<li>النقاط والإحصائيات</li>
+</ul>
 
-            <h2>4. خدمات الطرف الثالث</h2>
-            <ul>
-                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Cloud Storage & Auth</a></li>
-            </ul>
+<h2>3. الاستخدام</h2>
+<ul>
+<li>تحسين التجربة</li>
+</ul>
 
-            <h2>5. حذف البيانات</h2>
-            <p>يمكنك حذف حسابك وبياناتك نهائياً من داخل التطبيق أو عبر مراسلتنا.</p>
+<div class="contact-box">
+<p>engiba@gmail.com</p>
+</div>
+</section>
 
-            <div class="contact-box">
-                <h3>تواصل معنا</h3>
-                <p>Ibrahim Ayasrah</p>
-                <p><a href="mailto:engiba@gmail.com">engiba@gmail.com</a></p>
-            </div>
-        </section>
+<section class="english-section">
+<h2>Privacy Policy</h2>
+<p>This app is provided for free.</p>
+</section>
 
-        <section class="english-section">
-            <h2>Privacy Policy</h2>
-            <p>Jawab Tik is a free app provided as is.</p>
-        </section>
+<div class="footer">© 2026 Jawab Tik</div>
 
-        <div class="footer">
-            <p>© 2026 Jawab Tik</p>
-        </div>
+</div>
 
-    </div>
+<script>
+function toggleMode(){
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
+}
+</script>
 
 </body>
 </html>

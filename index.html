@@ -4,38 +4,24 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>سياسة الخصوصية - جواب تِك</title>
+<title>سياسة الخصوصية - جواب تِك | Privacy Policy</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ========= ROOT ========= */
 :root {
     --primary: #6366f1;
     --secondary: #8b5cf6;
-    --text-dark: #111827;
-    --text-light: #f9fafb;
 }
 
 /* ========= BODY ========= */
 body {
     font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #1e293b, #020617);
     margin: 0;
     padding: 20px;
-    transition: 0.4s;
-}
-
-/* Dark Mode */
-body.dark {
-    background: radial-gradient(circle at top, #1e293b, #020617);
-    color: var(--text-light);
-}
-
-/* Light Mode */
-body.light {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: var(--text-dark);
+    color: #e5e7eb;
 }
 
 /* ========= CONTAINER ========= */
@@ -44,35 +30,28 @@ body.light {
     margin: auto;
     padding: 40px;
     border-radius: 25px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
-body.dark .container {
+    backdrop-filter: blur(15px);
     background: rgba(255,255,255,0.05);
-}
-
-body.light .container {
-    background: white;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
 /* ========= HEADER ========= */
 .header {
     text-align: center;
     position: relative;
+    margin-bottom: 40px;
 }
 
-/* Glow */
 .header::before {
     content: "";
     position: absolute;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(99,102,241,0.35), transparent 70%);
-    filter: blur(60px);
-    top: -100px;
+    top: -80px;
     left: 50%;
     transform: translateX(-50%);
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(118,75,162,0.35), transparent 70%);
+    filter: blur(60px);
 }
 
 /* LOGO */
@@ -90,8 +69,8 @@ body.light .container {
 }
 
 .logo-box img {
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
     object-fit: contain;
 }
 
@@ -102,52 +81,16 @@ body.light .container {
     100%{transform:translateY(0)}
 }
 
-/* ========= TEXT ========= */
-h1 {
-    font-size: 2em;
-    margin: 15px 0;
-    font-weight: 700;
-}
+/* TEXT */
+h1 { color: #c7d2fe; }
+h2 { color: #a5b4fc; border-right:4px solid var(--primary); padding-right:10px; }
+h3 { color: #c7d2fe; }
 
-body.dark h1 { color: #e0e7ff; }
-body.light h1 { color: #1e293b; }
+p, li { line-height:1.8; color:#e5e7eb; }
 
-.app-name {
-    font-size: 1.1em;
-    opacity: 0.8;
-}
-
-/* Updated Badge */
-.last-updated {
-    display:inline-block;
-    margin-top:10px;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:0.9em;
-}
-
-body.dark .last-updated {
-    background: rgba(255,255,255,0.1);
-}
-
-body.light .last-updated {
-    background: #eef2ff;
-}
-
-/* ========= SECTIONS ========= */
-h2 {
-    margin-top:30px;
-    border-right:4px solid var(--primary);
-    padding-right:10px;
-}
-
-p,li {
-    line-height:1.8;
-}
-
-/* Cards */
+ul { list-style:none; padding:0; }
 ul li {
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.05);
     padding:12px;
     border-radius:10px;
     margin-bottom:8px;
@@ -155,9 +98,9 @@ ul li {
 
 /* Contact */
 .contact-box {
+    background: rgba(99,102,241,0.15);
     padding:20px;
     border-radius:15px;
-    background: rgba(99,102,241,0.1);
 }
 
 /* English */
@@ -168,57 +111,106 @@ ul li {
     padding-top:20px;
 }
 
+/* Links */
+a { color:#93c5fd; }
+
 /* Footer */
 .footer {
     text-align:center;
-    margin-top:30px;
-    opacity:0.7;
+    margin-top:40px;
+    color:#9ca3af;
 }
 
-/* ========= TOGGLE ========= */
-.toggle {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    background: #6366f1;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
+.last-updated {
+    background: rgba(255,255,255,0.1);
+    padding:6px 15px;
+    border-radius:20px;
+    display:inline-block;
+}
+
+.app-name {
+    opacity:0.8;
 }
 
 </style>
 </head>
 
-<body class="dark">
-
-<button class="toggle" onclick="toggleMode()">🌙 / ☀️</button>
+<body>
 
 <div class="container">
 
 <div class="header">
 
 <div class="logo-box">
-<img src="https://raw.githubusercontent.com/ibaaya/jawab-tik-privacy/main/logo.png">
+<img src="https://raw.githubusercontent.com/ibaaya/jawab-tik-privacy/main/logo.png" alt="logo">
 </div>
 
 <h1>سياسة الخصوصية | Privacy Policy</h1>
 
-<p class="app-name">تطبيق جواب تِك - Jawab Tik</p>
+<p class="app-name"><strong>تطبيق جواب تِك - Jawab Tik</strong></p>
 
 <div class="last-updated">آخر تحديث: 28 فبراير 2026</div>
 
 </div>
 
-<section>
-<h2>1. مقدمة</h2>
-<p>نحترم خصوصيتك ونحمي بياناتك.</p>
+<!-- ================= المحتوى الكامل ================= -->
 
-<h2>2. البيانات</h2>
+<section>
+
+<h2>📋 المحتويات</h2>
+<ul>
+<li>نظرة عامة</li>
+<li>المميزات الرئيسية</li>
+<li>الجوانب التقنية</li>
+<li>هيكلية البيانات</li>
+<li>لقطات الشاشة</li>
+<li>التثبيت والمتطلبات</li>
+<li>البنية المعمارية</li>
+<li>الاستخدام</li>
+<li>المساهمة</li>
+<li>خارطة الطريق</li>
+<li>ملاحظات قانونية</li>
+<li>التواصل</li>
+</ul>
+
+<h2>🌟 نظرة عامة</h2>
+<p>جواب تِك هو تطبيق مسابقات تعليمي مجاني مبني بتقنية Flutter، يجمع بين المتعة والفائدة لاختبار وتعزيز المعرفة الإسلامية والثقافة العامة. صُمّم التطبيق ليكون صدقة جارية تنفع المسلمين وتساهم في نشر العلم النافع.</p>
+
+<h2>🎯 الهدف</h2>
+<p>نشر المعرفة الإسلامية بطريقة تفاعلية ممتعة.</p>
+
+<h2>📊 الإحصائيات</h2>
+<ul>
+<li>2500+ سؤال</li>
+<li>4 تصنيفات</li>
+<li>4 مستويات</li>
+<li>3 أنماط لعب</li>
+<li>100% مجاني</li>
+</ul>
+
+<h2>✨ المميزات الرئيسية</h2>
+<p>محتوى ضخم + أنماط لعب متعددة + تحليل أداء + شرح الإجابات.</p>
+
+<h2>🛠 الجوانب التقنية</h2>
+<ul>
+<li>Flutter + Dart</li>
+<li>Provider (MVVM)</li>
+<li>SQLite + Firebase</li>
+</ul>
+
+</section>
+
+<!-- ================= سياسة الخصوصية ================= -->
+
+<section class="arabic-content">
+
+<h2>1. مقدمة</h2>
+<p>مرحباً بك في تطبيق "جواب تِك". نحترم خصوصيتك.</p>
+
+<h2>2. المعلومات</h2>
 <ul>
 <li>الاسم والبريد</li>
-<li>النقاط والإحصائيات</li>
+<li>الإحصائيات</li>
 </ul>
 
 <h2>3. الاستخدام</h2>
@@ -226,26 +218,31 @@ ul li {
 <li>تحسين التجربة</li>
 </ul>
 
+<h2>4. خدمات الطرف الثالث</h2>
+<ul>
+<li><a href="https://www.google.com/policies/privacy/" target="_blank">Google</a></li>
+<li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase</a></li>
+</ul>
+
 <div class="contact-box">
-<p>engiba@gmail.com</p>
+<h3>تواصل معنا</h3>
+<p><a href="mailto:engiba@gmail.com">engiba@gmail.com</a></p>
 </div>
+
 </section>
 
 <section class="english-section">
+
 <h2>Privacy Policy</h2>
-<p>This app is provided for free.</p>
+<p>This app is provided as is.</p>
+
 </section>
 
-<div class="footer">© 2026 Jawab Tik</div>
-
+<div class="footer">
+<p>© 2026 Jawab Tik</p>
 </div>
 
-<script>
-function toggleMode(){
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-}
-</script>
+</div>
 
 </body>
 </html>
